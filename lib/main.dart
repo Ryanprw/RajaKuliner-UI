@@ -1,3 +1,4 @@
+import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +46,7 @@ class _MainAppState extends State<MainApp> with WidgetsBindingObserver {
       navigatorKey: Get.navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: getDefaultTheme(),
-      home: MainNavigationView(),
+      home: LoginView(),
       onGenerateRoute: (routeSettings) {
         print(routeSettings.name);
         return null;

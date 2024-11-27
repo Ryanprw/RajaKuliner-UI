@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../view/order_view.dart';
+import '../view/product_detatail_view.dart';
 
-class OrderController extends State<OrderView> {
-  static late OrderController instance;
-  late OrderView view;
+class ProductDetatailController extends State<ProductDetatailView> {
+  static late ProductDetatailController instance;
+  late ProductDetatailView view;
 
   @override
   void initState() {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../view/dashboard_view.dart';
+import '../view/cart_view.dart';
 
-class DashboardController extends State<DashboardView> {
-  static late DashboardController instance;
-  late DashboardView view;
+class CartController extends State<CartView> {
+  static late CartController instance;
+  late CartView view;
 
   @override
   void initState() {
@@ -23,11 +23,6 @@ class DashboardController extends State<DashboardView> {
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
-  int currentIndex = 0;
-  final CarouselController CarouselSliderController = CarouselController();
-
-  List categories = ["Cetering", "Prasmanan", "Restoran", "Frozen Food"];
-
   List<Map<String, dynamic>> products = [
     {
       "id": 1,
@@ -35,11 +30,12 @@ class DashboardController extends State<DashboardView> {
           "https://res.cloudinary.com/dotz74j1p/raw/upload/v1716045560/mq2o8cqtmvaobrnil7xi.png",
       "product_name": "Frenzy Pizza",
       "price": 25,
-      "category": "Food",
+      " ": "Food",
       "description":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "discount_price": 20,
       "is_favorite": false,
+      "qty": 50,
     },
     {
       "id": 2,
@@ -52,6 +48,7 @@ class DashboardController extends State<DashboardView> {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "discount_price": 18,
       "is_favorite": true,
+      "qty": 40,
     },
     {
       "id": 3,
@@ -64,6 +61,7 @@ class DashboardController extends State<DashboardView> {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "discount_price": 28,
       "is_favorite": false,
+      "qty": 30,
     },
     {
       "id": 4,
@@ -76,6 +74,7 @@ class DashboardController extends State<DashboardView> {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "discount_price": 25,
       "is_favorite": true,
+      "qty": 20,
     },
     {
       "id": 5,
@@ -100,6 +99,7 @@ class DashboardController extends State<DashboardView> {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "discount_price": 45,
       "is_favorite": false,
+      "qty": 45,
     },
     {
       "id": 7,
@@ -112,6 +112,7 @@ class DashboardController extends State<DashboardView> {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "discount_price": 56,
       "is_favorite": false,
+      "qty": 33,
     },
     {
       "id": 8,
@@ -124,6 +125,7 @@ class DashboardController extends State<DashboardView> {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "discount_price": 50,
       "is_favorite": true,
+      "qty": 23,
     },
     {
       "id": 9,
@@ -135,7 +137,8 @@ class DashboardController extends State<DashboardView> {
       "description":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "discount_price": 50,
-      "is_favorite": true
+      "is_favorite": true,
+      "qty": 15,
     },
     {
       "id": 10,
@@ -147,7 +150,8 @@ class DashboardController extends State<DashboardView> {
       "description":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "discount_price": 50,
-      "is_favorite": true
+      "is_favorite": true,
+      "qty": 38,
     },
   ];
 }

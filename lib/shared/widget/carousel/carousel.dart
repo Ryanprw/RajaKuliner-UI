@@ -141,7 +141,6 @@ class _QCarouselState extends State<QCarousel> {
               return Column(
                 children: [
                   CarouselSlider(
-                    carouselController: carouselController,
                     options: CarouselOptions(
                       height: 160,
                       autoPlay: true,
@@ -178,8 +177,7 @@ class _QCarouselState extends State<QCarousel> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: widget.images.asMap().entries.map((entry) {
                       return GestureDetector(
-                        onTap: () =>
-                            carouselController.animateToPage(entry.key),
+                        onTap: () {},
                         child: Container(
                           width: 12,
                           height: 12,
@@ -213,7 +211,6 @@ class _QCarouselState extends State<QCarousel> {
               return Column(
                 children: [
                   CarouselSlider(
-                    carouselController: carouselController,
                     options: CarouselOptions(
                       height: 160,
                       autoPlay: true,
@@ -251,8 +248,7 @@ class _QCarouselState extends State<QCarousel> {
                     children: widget.images.asMap().entries.map((entry) {
                       final isSelected = currentIndex == entry.key;
                       return GestureDetector(
-                        onTap: () =>
-                            carouselController.animateToPage(entry.key),
+                        onTap: () {},
                         child: Container(
                           width: isSelected ? 40 : 6.0,
                           height: 6,

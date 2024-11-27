@@ -8,12 +8,17 @@ class MainNavigationController extends State<MainNavigationView> {
 
   @override
   void initState() {
-    instance = this;
     super.initState();
+    instance = this;
+    WidgetsBinding.instance.addPostFrameCallback((_) => onReady());
   }
 
+  void onReady() {}
+
   @override
-  void dispose() => super.dispose();
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
