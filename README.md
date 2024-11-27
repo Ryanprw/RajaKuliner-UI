@@ -2,7 +2,7 @@
 
 # Flutter RajaKuliner Figma To Code 
 
-Only flutter code implemented from figma design, and using hyper_ui
+Only flutter code implemented from figma design, and using [hyper_ui](https://github.com/denyocrworld/hyper_ui)
 
 ## Getting Started
 To build and run this project:
